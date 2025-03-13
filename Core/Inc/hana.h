@@ -1,0 +1,1 @@
+void initHana(void);

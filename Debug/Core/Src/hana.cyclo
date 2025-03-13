@@ -1,0 +1,9 @@
+../Core/Src/hana.c:15:6:InitHana	1
+../Core/Src/hana.c:20:6:swap_buffers	1
+../Core/Src/hana.c:26:6:draw_moving_gradient	3
+../Core/Src/hana.c:46:6:draw_screen	3
+../Core/Src/hana.c:57:9:draw_screen_sm	3
+../Core/Src/hana.c:73:6:draw_frame	1
+../Core/Src/hana.c:84:6:draw_funct_1	2
+../Core/Src/hana.c:100:6:draw_funct_2	3
+../Core/Src/hana.c:118:6:drawBackground	4

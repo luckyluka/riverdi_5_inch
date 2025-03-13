@@ -1,0 +1,9 @@
+../Core/Src/hana.c:15:6:InitHana	8	static
+../Core/Src/hana.c:20:6:swap_buffers	16	static
+../Core/Src/hana.c:26:6:draw_moving_gradient	48	static
+../Core/Src/hana.c:46:6:draw_screen	24	static
+../Core/Src/hana.c:57:9:draw_screen_sm	16	static
+../Core/Src/hana.c:73:6:draw_frame	24	static
+../Core/Src/hana.c:84:6:draw_funct_1	24	static
+../Core/Src/hana.c:100:6:draw_funct_2	24	static
+../Core/Src/hana.c:118:6:drawBackground	24	static
