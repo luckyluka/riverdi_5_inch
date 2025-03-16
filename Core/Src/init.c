@@ -42,7 +42,7 @@ GPU2D_HandleTypeDef hgpu2d;
 I2C_HandleTypeDef hi2c1;
 I2C_HandleTypeDef hi2c2;
 I2C_HandleTypeDef hi2c4;
-LTDC_HandleTypeDef hltdc;
+static LTDC_HandleTypeDef hltdc;
 OSPI_HandleTypeDef hospi1;
 RTC_HandleTypeDef hrtc;
 SD_HandleTypeDef hsd2;
@@ -125,12 +125,12 @@ I2C_HandleTypeDef Get_HI2C_StructPtr(uint8_t nr)
 	}
 }
 
-LTDC_HandleTypeDef Get_HLTDC_StructPtr(uint8_t nr)
+LTDC_HandleTypeDef * Get_HLTDC_StructPtr(uint8_t nr)
 {
 	switch(nr)
 	{
 	  case 1:
-		return hltdc;
+		return &hltdc;
 
 	}
 }
@@ -212,9 +212,7 @@ UART_HandleTypeDef Get_HUART_StructPtr(uint8_t nr)
 
 void InitPeripherals(void)
 {
-	  HAL_Init();
-
-      /* Initialize all configured peripherals */
+  /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
@@ -247,13 +245,12 @@ void InitPeripherals(void)
 
 void InitClocks(void)
 {
-  SystemPower_Config();
-
   /* Configure the system clock */
   SystemClock_Config();
-
   /* Configure the peripherals common clocks */
   PeriphCommonClock_Config();
+
+  SystemPower_Config();
 }
 
 
@@ -1800,4 +1797,15 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
+}
+
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+  }
+  /* USER CODE END Error_Handler_Debug */
 }

@@ -3,7 +3,6 @@
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 void Error_Handler(void);
-
 /* Private defines -----------------------------------------------------------*/
 #define LCD_DISP_RESET_Pin GPIO_PIN_7
 #define LCD_DISP_RESET_GPIO_Port GPIOH
@@ -24,7 +23,7 @@ DCACHE_HandleTypeDef Get_DCACHE_StructPtr(uint8_t nr);
 DMA2D_HandleTypeDef * Get_HDMA2D_StructPtr(uint8_t nr);
 GPU2D_HandleTypeDef Get_HGPU2D_StructPtr(uint8_t nr);
 I2C_HandleTypeDef Get_HI2C_StructPtr(uint8_t nr);
-LTDC_HandleTypeDef Get_HLTDC_StructPtr(uint8_t nr);
+LTDC_HandleTypeDef * Get_HLTDC_StructPtr(uint8_t nr);
 OSPI_HandleTypeDef Get_HOSPI_StructPtr(uint8_t nr);
 RTC_HandleTypeDef Get_HRTC_StructPtr(uint8_t nr);
 SD_HandleTypeDef Get_HSD_StructPtr(uint8_t nr);

@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stm32u5xx_it.h": "c",
-        "init.h": "c"
+        "init.h": "c",
+        "hana.h": "c"
     }
 }
